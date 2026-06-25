@@ -39,3 +39,15 @@ function mbpsToMBps(mbps) {
 console.log(mbpsToMBps(50));
 console.log(mbpsToMBps(100));
 
+// Uptime Calculator
+
+function calculateDowntime(uptime) {
+    const monthlyMinutes = 43200;
+
+    const downtime =
+        monthlyMinutes * ((100 - uptime) / 100);
+
+    return `${downtime.toFixed(2)} minutes downtime/month`;
+}
+
+console.log(calculateDowntime(99.9));
