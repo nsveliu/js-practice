@@ -18,3 +18,13 @@ function classifyIP(ip) {
 
 console.log(classifyIP("192.168.1.1"));
 console.log(classifyIP("8.8.8.8"));
+
+// Bandwidth Calculator
+
+function mbpsToMBps(mbps) {
+    return `${mbps} Mbps = ${mbps / 8} MB/s`;
+}
+
+console.log(mbpsToMBps(50));
+console.log(mbpsToMBps(100));
+
