@@ -15,3 +15,20 @@ function getTicketPriority(issueType) {
     return "Unknown";
   }
 }
+
+// calculateSLA(priority)
+
+function calculateSLA(priority) {
+  if (!priority || typeof priority !== 'string') return "No SLA available";
+  
+  switch (priority.trim().toLowerCase()) {
+    case 'high':
+      return "2 hours";
+    case 'medium':
+      return "8 hours";
+    case 'low':
+      return "24 hours";
+    default:
+      return "No SLA available";
+  }
+}
