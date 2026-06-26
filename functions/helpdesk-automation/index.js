@@ -33,7 +33,7 @@ function calculateSLA(priority) {
   }
 }
 
-// 3. assignTechnician(issueType)
+// assignTechnician(issueType)
 
 function assignTechnician(issueType) {
   if (!issueType || typeof issueType !== 'string') return "Unassigned";
@@ -47,3 +47,12 @@ function assignTechnician(issueType) {
   
   return "Unassigned";
 }
+
+// generateTicketId()
+
+const generateTicketId = (() => {
+  let nextId = 1001;
+  return () => {
+    return `HD-${nextId++}`;
+  };
+})();
