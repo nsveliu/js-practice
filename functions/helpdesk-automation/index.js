@@ -32,3 +32,18 @@ function calculateSLA(priority) {
       return "No SLA available";
   }
 }
+
+// 3. assignTechnician(issueType)
+
+function assignTechnician(issueType) {
+  if (!issueType || typeof issueType !== 'string') return "Unassigned";
+  
+  const normalized = issueType.toLowerCase().trim();
+  
+  if (normalized.includes("network")) return "Alex";
+  if (normalized.includes("hardware")) return "John";
+  if (normalized.includes("software")) return "Sarah";
+  if (normalized.includes("printer")) return "Mike";
+  
+  return "Unassigned";
+}
