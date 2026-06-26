@@ -65,3 +65,17 @@ function validateIssue(issue) {
   }
   return issue.trim().length > 0;
 }
+
+// generateTicketSummary(ticket)
+
+function generateTicketSummary(ticket) {
+  if (!ticket || typeof ticket !== 'object') return "Invalid Ticket Data";
+  
+  return `----------------------------------------
+TICKET SUMMARY [${ticket.id || 'N/A'}]
+----------------------------------------
+Issue:      ${ticket.issue || 'N/A'}
+Priority:   ${ticket.priority || 'N/A'}
+Assignee:   ${ticket.technician || 'Unassigned'}
+----------------------------------------`;
+}
