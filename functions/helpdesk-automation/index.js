@@ -79,3 +79,20 @@ Priority:   ${ticket.priority || 'N/A'}
 Assignee:   ${ticket.technician || 'Unassigned'}
 ----------------------------------------`;
 }
+
+// estimateCompletion(priority)
+
+function estimateCompletion(priority) {
+  if (!priority || typeof priority !== 'string') return "Unknown";
+  
+  switch (priority.trim().toLowerCase()) {
+    case 'high':
+      return "Today";
+    case 'medium':
+      return "Tomorrow";
+    case 'low':
+      return "Within three days";
+    default:
+      return "Unknown";
+  }
+}
