@@ -96,3 +96,25 @@ function estimateCompletion(priority) {
       return "Unknown";
   }
 }
+
+// 8. displayDashboard(stats)
+
+function displayDashboard(stats) {
+  const open = stats?.openTickets ?? 0;
+  const closed = stats?.closedTickets ?? 0;
+  const high = stats?.highPriority ?? 0;
+  const medium = stats?.mediumPriority ?? 0;
+  const low = stats?.lowPriority ?? 0;
+  
+  console.log("========================================");
+  console.log("          HELP DESK DASHBOARD           ");
+  console.log("========================================");
+  console.log(` Open Tickets:      ${open}`);
+  console.log(` Closed Tickets:    ${closed}`);
+  console.log("----------------------------------------");
+  console.log(" Priority Breakdown:");
+  console.log(`   🔴 High:         ${high}`);
+  console.log(`   🟡 Medium:       ${medium}`);
+  console.log(`   🟢 Low:          ${low}`);
+  console.log("========================================");
+}
