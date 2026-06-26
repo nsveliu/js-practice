@@ -56,3 +56,12 @@ const generateTicketId = (() => {
     return `HD-${nextId++}`;
   };
 })();
+
+// validateIssue(issue)
+
+function validateIssue(issue) {
+  if (issue === null || issue === undefined || typeof issue !== 'string') {
+    return false;
+  }
+  return issue.trim().length > 0;
+}
